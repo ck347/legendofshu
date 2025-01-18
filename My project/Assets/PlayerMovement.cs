@@ -1,4 +1,7 @@
+<<<<<<< Updated upstream
 using System.Collections;
+=======
+>>>>>>> Stashed changes
 using UnityEngine;
 using System.Collections;
 
@@ -11,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     private float jumpingPower = 16f;
     private bool isFacingRight = true;
 
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream:My project/Assets/Scripts/Mechanics/PlayerMovement.cs
     private bool canDash = true;
     private bool isDashing;
@@ -27,6 +31,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isDashing)
 =======
+=======
+>>>>>>> Stashed changes
     private bool doubleJump;
 
     private bool canDash = true;
@@ -56,6 +62,7 @@ public class PlayerMovement : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal");
 
         if (IsGrounded() && !Input.GetButton("Jump")) 
+<<<<<<< Updated upstream
 >>>>>>> Stashed changes:My project/Assets/PlayerMovement.cs
         {
             return;
@@ -66,6 +73,20 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpingPower);
+=======
+        {
+            doubleJump = false;
+        }
+
+        if (Input.GetButtonDown("Jump"))
+        {
+            if(IsGrounded() || doubleJump)
+            {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpingPower);
+
+            doubleJump = !doubleJump;
+            }
+>>>>>>> Stashed changes
         }
 
         if (Input.GetButtonUp("Jump") && rb.linearVelocity.y > 0f)
@@ -73,6 +94,7 @@ public class PlayerMovement : MonoBehaviour
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
         }
 
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream:My project/Assets/Scripts/Mechanics/PlayerMovement.cs
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
         {
@@ -82,6 +104,11 @@ public class PlayerMovement : MonoBehaviour
         {
             StartCoroutine(Dash()); 
 >>>>>>> Stashed changes:My project/Assets/PlayerMovement.cs
+=======
+        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash && !isDashing)
+        {
+            StartCoroutine(Dash()); 
+>>>>>>> Stashed changes
         }
 
         Flip();
@@ -89,6 +116,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream:My project/Assets/Scripts/Mechanics/PlayerMovement.cs
         if (isDashing)
         {
@@ -96,6 +124,8 @@ public class PlayerMovement : MonoBehaviour
         }
 =======
 >>>>>>> Stashed changes:My project/Assets/PlayerMovement.cs
+=======
+>>>>>>> Stashed changes
 
         rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocity.y);
     }
@@ -109,8 +139,13 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
         {
+<<<<<<< Updated upstream
             Vector3 localScale = transform.localScale;
             isFacingRight = !isFacingRight;
+=======
+            isFacingRight = !isFacingRight;
+            Vector3 localScale = transform.localScale;
+>>>>>>> Stashed changes
             localScale.x *= -1f;
             transform.localScale = localScale;
         }
@@ -127,12 +162,15 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(dashingTime);
         tr.emitting = false;
         rb.gravityScale = originalGravity;
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream:My project/Assets/Scripts/Mechanics/PlayerMovement.cs
         isDashing = false;
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
     }
 =======
+=======
+>>>>>>> Stashed changes
         isDashing = false; 
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true; 
@@ -144,5 +182,8 @@ public class PlayerMovement : MonoBehaviour
 
 
 
+<<<<<<< Updated upstream
 >>>>>>> Stashed changes:My project/Assets/PlayerMovement.cs
+=======
+>>>>>>> Stashed changes
 }
