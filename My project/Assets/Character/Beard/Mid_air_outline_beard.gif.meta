@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Mid_air_outline_beard_0: 2251016208709887661
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

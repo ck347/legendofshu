@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      landing_outline_beard_0: 5001414678963868233
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
