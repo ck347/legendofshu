@@ -7803,8 +7803,11 @@ GameObject:
   - component: {fileID: 741953968}
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_Layer: 5
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
   m_Layer: 0
@@ -7860,9 +7863,12 @@ Camera:
   orthographic: 1
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   orthographic size: 2.5
   m_Depth: 0
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
   orthographic size: 1.436044
@@ -7897,6 +7903,9 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -3.3, z: -10}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -7919,7 +7928,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   target: {fileID: 1079449395}
+=======
+  target: {fileID: 0}
+>>>>>>> Stashed changes
 =======
   target: {fileID: 0}
 >>>>>>> Stashed changes
