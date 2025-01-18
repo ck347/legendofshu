@@ -436,7 +436,7 @@ GameObject:
   - component: {fileID: 1990105933}
   - component: {fileID: 1990105932}
   - component: {fileID: 1990105931}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: Square (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
