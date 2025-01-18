@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5596b1287d526c14991bc7a0341a9c0c
+guid: 43304e11e7dc0664b8b8b53733f8e007
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4281637774074219296
-    second: jump_0
+      213: 2251016208709887661
+    second: Mid_air_outline_beard_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: jump_0
+      name: Mid_air_outline_beard_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 17
-        height: 34
+        width: 22
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 02b8694dede6b6b30800000000000000
-      internalID: 4281637774074219296
+      spriteID: da6accfb0573d3f10800000000000000
+      internalID: 2251016208709887661
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      jump_0: 4281637774074219296
+      Mid_air_outline_beard_0: 2251016208709887661
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

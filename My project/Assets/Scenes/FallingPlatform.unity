@@ -156,6 +156,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  tr: {fileID: 0}
 --- !u!61 &477710948
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -525,7 +526,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1227261566}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61ed3d44d59164a5698995b1ae45195b, type: 3}
+  m_Script: {fileID: 11500000, guid: ae89a3be2f05304479b2a6624930df09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1227261571}

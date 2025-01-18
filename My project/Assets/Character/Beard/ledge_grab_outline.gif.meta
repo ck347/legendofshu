@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a8c08bc3619b1cf4fb4cde0327563582
+guid: 297d3895f8a10de4092001b28ed679d5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1778171604891230935
-    second: landing_0
+      213: -363227668294694073
+    second: ledge_grab_outline_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: landing_0
+      name: ledge_grab_outline_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 20
-        height: 35
+        y: 2
+        width: 22
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 92d95c4b85aa257e0800000000000000
-      internalID: -1778171604891230935
+      spriteID: 74b83b23c5e85faf0800000000000000
+      internalID: -363227668294694073
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      landing_0: -1778171604891230935
+      ledge_grab_outline_0: -363227668294694073
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
