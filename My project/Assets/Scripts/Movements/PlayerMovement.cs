@@ -15,7 +15,9 @@ public class PlayerMovement : MonoBehaviour
     private float dashingTime = 0.2f;
     private float dashingCooldown = 1f;
 
-    //public GameObject voidObject; // Renamed from 'void' to 'voidObject'
+    public int age = 20;
+     public GameObject newPrefab;
+
     private Vector3 respawnPoint;
 
     [SerializeField] private Rigidbody2D rb;
@@ -116,13 +118,36 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.tag == "death")
         {
-            Debug.Log("Death zone hit. Respawning...");
             transform.position = respawnPoint;
+            age += 2;
+            Debug.Log(age);
+
+            if (age >= 30)
+            {
+                GameObject newObject = Instantiate(newPrefab, transform.position, transform.rotation);
+
+// Disable the renderer of the current GameObject (optional for visual effect).
+GetComponent<Renderer>().enabled = false;
+
+// Enable the renderer of the new prefab (if needed).
+newObject.GetComponent<Renderer>().enabled = true;
+
+// Schedule the destruction of the current GameObject at the end of the frame.
+Destroy(gameObject, 0.1f);
+
+// Destroy the current GameObject.
+Destroy(gameObject);
+
+                
+            }
+            if (age >= 40)
+            {
+               
+            }
         }
         else if (collision.tag == "checkpoint")
         {
-            Debug.Log("Checkpoint reached. Updating respawn point...");
             respawnPoint = transform.position;
-        } 
+        }
     }
 }
