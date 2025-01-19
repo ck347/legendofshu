@@ -1,20 +1,20 @@
-using System.Collection;
-using System.Collection.Generic;
-using UnityEngine;
+// using System.Collection;
+// using System.Collection.Generic;
+// using UnityEngine;
 
-public class BGMusic
-{
-    public static BackgroundMusic_Script instance;
+// public class BGMusic
+// {
+//     public static BackgroundMusic_Script instance;
 
-    private void Awake()
-    {
-        if (instance == null)
-        {
-            DontDestroyOnLoad(this.gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
-}
+//     private void Awake()
+//     {
+//         if (instance == null)
+//         {
+//             DontDestroyOnLoad(this.gameObject);
+//         }
+//         else
+//         {
+//             Destroy(gameObject);
+//         }
+//     }
+// }
