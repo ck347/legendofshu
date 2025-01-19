@@ -1722,7 +1722,7 @@ GameObject:
   - component: {fileID: 228325675}
   m_Layer: 6
   m_Name: Tilemap
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14070,6 +14070,7 @@ GameObject:
   - component: {fileID: 741953967}
   - component: {fileID: 741953966}
   - component: {fileID: 741953965}
+  - component: {fileID: 741953968}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -45009,7 +45010,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 741953967}
   - {fileID: 1653289278}
-  - {fileID: 1079449395}
   - {fileID: 233848432115244887}
   - {fileID: 1062865838}
   - {fileID: 5081282072656340407}
