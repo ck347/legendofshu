@@ -15,6 +15,12 @@ public class PlayerMovement : MonoBehaviour
     private float dashingTime = 0.2f;
     private float dashingCooldown = 1f;
 
+    public int age = 20;
+
+    public Sprite beard;
+    public Sprite greybeard;
+
+
     //public GameObject voidObject; // Renamed from 'void' to 'voidObject'
     private Vector3 respawnPoint;
 
@@ -116,12 +122,20 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.tag == "death")
         {
-            Debug.Log("Death zone hit. Respawning...");
             transform.position = respawnPoint;
+            age += 2;
+
+            if(age >= 30)
+            {
+                this.gameObject.GetComponent<SpriteRenderer>().sprite = beard;
+            }
+            if(age >= 40)
+            {
+                this.gameObject.GetComponent<SpriteRenderer>().sprite = greybeard;
+            }
         }
         else if (collision.tag == "checkpoint")
         {
-            Debug.Log("Checkpoint reached. Updating respawn point...");
             respawnPoint = transform.position;
         } 
     }
