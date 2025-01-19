@@ -18,11 +18,10 @@ public class FallingSpike : MonoBehaviour
     {
     // set the position
         startPos = transform.position;
-        int x = 0;
-        while(x != 10)
+        
+        while(true)
         {
         StartCoroutine(Fall());
-        x +=1;
         }
     }      
 
