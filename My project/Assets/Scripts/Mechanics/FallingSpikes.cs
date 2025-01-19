@@ -1,38 +1,37 @@
-/*
 using UnityEngine;
-using System.Collections;
 
-public class FallingSpikes
+
+public class FallingSpike : MonoBehaviour
 {
-    private float fallDelay = 1f;
-    private float destroyDelay = 2f;
-
-    [SerializeField] private Rigidbody2D rb;
+    Vector2 startPos;
 
     void Start()
     {
+    // set the position
+        startPos = transform.position;
+    }      
 
-    }
+    void Awake()    
 
-    void Update()
     {
-        if (transform.position.y >= -4.53)
+        if (transform.position.y >= 4.53)
         {
-            transform.Translate(0f, -0.25f, 0f);
+            transform.Translate(0f, -0.1f, 0f);
         }
         else
         {
-            this.gameObject.transform(2f,2f,0f);
-        }
+            Respawn();
+
+            }
     }
 
-    private IEnumerator Fall()
+    void Respawn()
     {
-        yield return new WaitForSeconds(fallDelay);
-        rb.bodyType = RigidbodyType2D.Dynamic;
-        Destroy(gameObject, destroyDelay);
+        transform.position = startPos;
+
+
     }
 
 
 }
-*/
+
