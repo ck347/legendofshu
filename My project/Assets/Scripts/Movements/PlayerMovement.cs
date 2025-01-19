@@ -20,6 +20,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private TrailRenderer tr;
 
+    private int jumpCount;
+    private int maxJumpCount = 2;
+
     private void Update()
     {
         if (isDashing)
@@ -31,15 +34,22 @@ public class PlayerMovement : MonoBehaviour
         
         animator.SetFloat("Speed", Mathf.Abs(horizontal));
 
-        if (Input.GetButtonDown("Jump")) // && IsGrounded()
+        if (Input.GetButtonDown("Jump") && (IsGrounded() || jumpCount < maxJumpCount))
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpingPower);
             animator.SetBool("isJumping", true);
+            jumpCount++;
         }
 
         if (Input.GetButtonUp("Jump") && rb.linearVelocity.y > 0f)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
+        }
+
+        if (IsGrounded())
+        {
+            animator.SetBool("isJumping", false);
+            jumpCount = 0;
         }
 
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
@@ -48,7 +58,6 @@ public class PlayerMovement : MonoBehaviour
         }
 
         Flip();
-
     }
 
     private void FixedUpdate()
@@ -63,21 +72,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool IsGrounded()
     {
-        bool grounded = Physics2D.OverlapCircle(groundCheck.position, 0.3f, groundLayer);
-        Debug.Log("IsGrounded: " + grounded);
-        Debug.Log("GroundCheck Position: " + groundCheck.position);
-        return grounded;    
-    }
-
-    private void Flip()
-    {
-        if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
-        {
-            Vector3 localScale = transform.localScale;
-            isFacingRight = !isFacingRight;
-            localScale.x *= -1f;
-            transform.localScale = localScale;
-        }
+        return Physics2D.OverlapCircle(groundCheck.position, 0.3f, groundLayer);
     }
 
     private IEnumerator Dash()
@@ -96,8 +91,14 @@ public class PlayerMovement : MonoBehaviour
         canDash = true;
     }
 
-    public void onLanding()
+    private void Flip()
     {
-        animator.SetBool("isJumping", false);
+        if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
+        {
+            isFacingRight = !isFacingRight;
+            Vector3 localScale = transform.localScale;
+            localScale.x *= -1f;
+            transform.localScale = localScale;
+        }
     }
 }
