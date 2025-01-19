@@ -15,6 +15,9 @@ public class PlayerMovement : MonoBehaviour
     private float dashingTime = 0.2f;
     private float dashingCooldown = 1f;
 
+    private Vector3 respawnPoint;
+    public GameObject death;
+
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
@@ -22,6 +25,11 @@ public class PlayerMovement : MonoBehaviour
 
     private int jumpCount;
     private int maxJumpCount = 1;
+
+    void Start()
+    {
+        respawnPoint = transform.position;
+    }
 
     private void Update()
     {
@@ -101,4 +109,13 @@ public class PlayerMovement : MonoBehaviour
             transform.localScale = localScale;
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "death")
+        {
+            transform.position = respawnPoint;
+        }
+    }
+    
 }

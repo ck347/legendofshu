@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Idle beard 12_0: -3373380833301920461
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
