@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c0957f182d770634dbd4c4c55cff0a10
+guid: a937ec475e897c64783a2ffaa6b49581
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9072384733171015631
-    second: Idle beard 4_0
+      213: -5983326159669526518
+    second: Idle grey 8_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle beard 4_0
+      name: Idle grey 8_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1302aa9172a681280800000000000000
-      internalID: -9072384733171015631
+      spriteID: a00889d0f84f6fca0800000000000000
+      internalID: -5983326159669526518
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Idle beard 4_0: -9072384733171015631
+      Idle grey 8_0: -5983326159669526518
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
