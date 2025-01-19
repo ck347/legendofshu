@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      landing_outline_grey_0: -560627588532752055
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

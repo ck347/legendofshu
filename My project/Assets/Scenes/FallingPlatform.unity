@@ -623,6 +623,12 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &3798042131642551644 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3740709987811767821, guid: f22dc224bbdb5427db2844454b90c3c6,
+    type: 3}
+  m_PrefabInstance: {fileID: 4188742043511026203}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4188742043511026203
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -639,7 +645,7 @@ PrefabInstance:
     - target: {fileID: 2189683598824365916, guid: f22dc224bbdb5427db2844454b90c3c6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 2.13
       objectReference: {fileID: 0}
     - target: {fileID: 2189683598824365916, guid: f22dc224bbdb5427db2844454b90c3c6,
         type: 3}
@@ -689,8 +695,55 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3740709987811767821, guid: f22dc224bbdb5427db2844454b90c3c6,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6856594429077531483}
+    - targetCorrespondingSourceObject: {fileID: 3740709987811767821, guid: f22dc224bbdb5427db2844454b90c3c6,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6856594429077531486}
   m_SourcePrefab: {fileID: 100100000, guid: f22dc224bbdb5427db2844454b90c3c6, type: 3}
+--- !u!114 &6856594429077531483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3798042131642551644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77ff8b7600f5c415295d9371033d71d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!50 &6856594429077531486
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3798042131642551644}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
