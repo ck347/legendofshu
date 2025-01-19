@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private TrailRenderer tr;
 
     private int jumpCount;
-    private int maxJumpCount = 2;
+    private int maxJumpCount = 1;
 
     private void Update()
     {
