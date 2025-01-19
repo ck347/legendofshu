@@ -141,6 +141,10 @@ MonoBehaviour:
   animator: {fileID: 0}
   age: 20
   newPrefab: {fileID: 0}
+  Controller_young: {fileID: 9100000, guid: d8d0aad28c54f5b428685a26cd90e92c, type: 2}
+  Controller_beard: {fileID: 9100000, guid: 742f363725fc0de42aa6d220176641bb, type: 2}
+  Controller_greyBeard: {fileID: 9100000, guid: b3622b8fa1f772245a10a35658ab9384,
+    type: 2}
   rb: {fileID: 5725397115067064464}
   groundCheck: {fileID: 6866062082997531379}
   groundLayer:

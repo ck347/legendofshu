@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEditor.Animations;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -16,7 +17,13 @@ public class PlayerMovement : MonoBehaviour
     private float dashingCooldown = 1f;
 
     public int age = 20;
-     public GameObject newPrefab;
+    public GameObject newPrefab;
+
+    private Animator anim;
+    public AnimatorController Controller_young;
+    public AnimatorController Controller_beard;
+    public AnimatorController Controller_greyBeard;
+
 
     private Vector3 respawnPoint;
 
@@ -30,6 +37,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        anim = GetComponent<Animator>();
         respawnPoint = transform.position;
     }
 
@@ -124,25 +132,12 @@ public class PlayerMovement : MonoBehaviour
 
             if (age >= 30)
             {
-                GameObject newObject = Instantiate(newPrefab, transform.position, transform.rotation);
-
-// Disable the renderer of the current GameObject (optional for visual effect).
-GetComponent<Renderer>().enabled = false;
-
-// Enable the renderer of the new prefab (if needed).
-newObject.GetComponent<Renderer>().enabled = true;
-
-// Schedule the destruction of the current GameObject at the end of the frame.
-Destroy(gameObject, 0.1f);
-
-// Destroy the current GameObject.
-Destroy(gameObject);
-
+                anim.runtimeAnimatorController = Controller_beard;
                 
             }
             if (age >= 40)
             {
-               
+                anim.runtimeAnimatorController = Controller_greyBeard;
             }
         }
         else if (collision.tag == "checkpoint")
