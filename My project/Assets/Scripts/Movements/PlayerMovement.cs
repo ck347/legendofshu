@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public Animator animator;
     private float horizontal;
     private float speed = 5f;
     private float jumpingPower = 10f;
@@ -27,10 +28,13 @@ public class PlayerMovement : MonoBehaviour
         }
 
         horizontal = Input.GetAxisRaw("Horizontal");
+        
+        animator.SetFloat("Speed", Mathf.Abs(horizontal));
 
-        if (Input.GetButtonDown("Jump") && IsGrounded())
+        if (Input.GetButtonDown("Jump")) // && IsGrounded()
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpingPower);
+            animator.SetBool("isJumping", true);
         }
 
         if (Input.GetButtonUp("Jump") && rb.linearVelocity.y > 0f)
@@ -44,6 +48,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         Flip();
+
     }
 
     private void FixedUpdate()
@@ -58,7 +63,10 @@ public class PlayerMovement : MonoBehaviour
 
     private bool IsGrounded()
     {
-        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+        bool grounded = Physics2D.OverlapCircle(groundCheck.position, 0.3f, groundLayer);
+        Debug.Log("IsGrounded: " + grounded);
+        Debug.Log("GroundCheck Position: " + groundCheck.position);
+        return grounded;    
     }
 
     private void Flip()
@@ -86,5 +94,10 @@ public class PlayerMovement : MonoBehaviour
         isDashing = false;
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
+    }
+
+    public void onLanding()
+    {
+        animator.SetBool("isJumping", false);
     }
 }
