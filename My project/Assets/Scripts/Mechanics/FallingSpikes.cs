@@ -21,15 +21,12 @@ public class FallingSpike : MonoBehaviour
         else
         {
             Respawn();
-
-            }
+        }
     }
 
     void Respawn()
     {
         transform.position = startPos;
-
-
     }
 
 

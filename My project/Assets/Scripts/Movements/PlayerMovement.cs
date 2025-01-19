@@ -11,12 +11,12 @@ public class PlayerMovement : MonoBehaviour
 
     private bool canDash = true;
     private bool isDashing;
-    private float dashingPower = 12f;
+    private float dashingPower = 24f;
     private float dashingTime = 0.2f;
     private float dashingCooldown = 1f;
 
+    //public GameObject voidObject; // Renamed from 'void' to 'voidObject'
     private Vector3 respawnPoint;
-    public GameObject death;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
@@ -112,10 +112,15 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "death")
+        if (collision.tag == "death")
         {
+            Debug.Log("Death zone hit. Respawning...");
             transform.position = respawnPoint;
         }
+        else if (collision.tag == "checkpoint")
+        {
+            Debug.Log("Checkpoint reached. Updating respawn point...");
+            respawnPoint = transform.position;
+        } 
     }
-    
 }
