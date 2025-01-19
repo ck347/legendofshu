@@ -16,12 +16,8 @@ public class PlayerMovement : MonoBehaviour
     private float dashingCooldown = 1f;
 
     public int age = 20;
+     public GameObject newPrefab;
 
-    public Sprite beard;
-    public Sprite greybeard;
-
-
-    //public GameObject voidObject; // Renamed from 'void' to 'voidObject'
     private Vector3 respawnPoint;
 
     [SerializeField] private Rigidbody2D rb;
@@ -124,19 +120,34 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.position = respawnPoint;
             age += 2;
+            Debug.Log(age);
 
-            if(age >= 30)
+            if (age >= 30)
             {
-                this.gameObject.GetComponent<SpriteRenderer>().sprite = beard;
+                GameObject newObject = Instantiate(newPrefab, transform.position, transform.rotation);
+
+// Disable the renderer of the current GameObject (optional for visual effect).
+GetComponent<Renderer>().enabled = false;
+
+// Enable the renderer of the new prefab (if needed).
+newObject.GetComponent<Renderer>().enabled = true;
+
+// Schedule the destruction of the current GameObject at the end of the frame.
+Destroy(gameObject, 0.1f);
+
+// Destroy the current GameObject.
+Destroy(gameObject);
+
+                
             }
-            if(age >= 40)
+            if (age >= 40)
             {
-                this.gameObject.GetComponent<SpriteRenderer>().sprite = greybeard;
+               
             }
         }
         else if (collision.tag == "checkpoint")
         {
             respawnPoint = transform.position;
-        } 
+        }
     }
 }
