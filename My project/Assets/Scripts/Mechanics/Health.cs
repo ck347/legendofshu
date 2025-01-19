@@ -5,6 +5,8 @@ public class Health : MonoBehaviour
     public int maxHP = 1;
     private int currentHP;
 
+    
+
     private void Start()
     {
         currentHP = maxHP;
