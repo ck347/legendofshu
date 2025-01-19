@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Ledge beard 6_0: 5285236547338562785
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

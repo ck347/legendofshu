@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Run beard 3_0: -7698696214144365439
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
