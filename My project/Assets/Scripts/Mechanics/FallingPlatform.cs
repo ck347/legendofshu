@@ -12,7 +12,7 @@ public class FallingPlatform : MonoBehaviour
     }  
     
     private float fallDelay = 1f;
-    private float destroyDelay = 2f;
+
     private float respawnDelay = 3f;
 
     [SerializeField] private Rigidbody2D rb;
