@@ -45,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && (IsGrounded() || jumpCount < maxJumpCount))
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpingPower);
-            animator.SetBool("isJumping", true);
+            // animator.SetBool("isJumping", true);
             jumpCount++;
         }
 
@@ -58,6 +58,8 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool("isJumping", false);
             jumpCount = 0;
+        } else {
+            animator.SetBool("isJumping", true);
         }
 
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
