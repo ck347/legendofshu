@@ -12,7 +12,7 @@ public class FallingPlatform : MonoBehaviour
     }  
     
     private float fallDelay = 1f;
-    private float destroyDelay = 2f;
+
     private float respawnDelay = 3f;
 
     [SerializeField] private Rigidbody2D rb;
@@ -30,12 +30,10 @@ public class FallingPlatform : MonoBehaviour
         yield return new WaitForSeconds(fallDelay);
         rb.bodyType = RigidbodyType2D.Dynamic;
         // Destroy(gameObject, destroyDelay);
-        Respawn();
+        yield return new WaitForSeconds(respawnDelay);
+        rb.bodyType = RigidbodyType2D.Kinematic;
+        transform.position = startPos;
+        
     }
 
-    IEnumerator Respawn()
-    {
-        yield return new WaitForSeconds(respawnDelay);
-        transform.position = startPos;
-    }
 }
